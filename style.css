@@ -1,0 +1,160 @@
+body{
+  margin: 50px;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: hsl(27, 66%, 92%);
+}
+
+p{
+  margin: 0;
+  font-family: DM Sans;
+  font-size: 18px;
+}
+
+.balance-container{
+  width: 100%;
+  max-width: 486px;
+  height: 62px;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 14px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  color: hsl(33, 100%, 98%);
+}
+
+.balance-amount{
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.content{
+  width: 100%;
+  max-width: 486px;
+  height: 450px;
+  background-color: hsl(33, 100%, 98%);
+  border-radius: 14px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: hsl(25, 47%, 15%);
+}
+
+.head-text{
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.chart{
+  display: grid;
+  grid-template-columns: repeat(7, 10.5%);
+  grid-template-rows: auto;
+  align-items: end;
+  gap: 4%;
+}
+
+.text-day{
+  position: absolute;
+  bottom: -30px;
+  color: hsl(28, 10%, 53%);
+}
+
+.tip-amount{
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  background-color: hsl(25, 47%, 15%);
+  color: hsl(33, 100%, 98%);
+  padding: 10px;
+  border-radius: 6px;
+  transition: opacity 0.15s;
+}
+
+.block{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 6px;
+  transition: filter 0.15s;
+}
+
+.cyanclr{
+  background-color: hsl(186, 34%, 60%);
+}
+
+.block:hover{
+  filter: brightness(130%);
+  cursor: pointer;
+}
+
+.block:hover .tip-amount{
+  opacity: 1;
+}
+
+.mon{height: 50px;}
+
+.tue{height: 100px;}
+
+.wed{height: 150px;}
+
+.thu{height: 90px;}
+
+.fri{height: 60px;}
+
+.sat{height: 120px;}
+
+.sun{height: 75px;}
+
+.underline-chart{
+  width: 100%;
+  height: 3px;
+  background-color: hsl(27, 66%, 92%);
+}
+
+.stats{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.this-month{
+  color: hsl(28, 10%, 53%);
+}
+
+.total-sum{
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.percents{
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: end;
+}
+
+@media(max-width: 490px){
+  .head-text{font-size: 22px;}
+  .this-month{font-size: 14px;}
+  .total-sum{font-size: 35px;}
+}
+
+@media(max-width: 370px){
+  .head-text{font-size: 18px;}
+  .this-month{font-size: 12px;}
+  .total-sum{font-size: 26px;}
+  .tip-amount{font-size: 12px;}
+  .text-day{font-size: 12px;}
+  .percents{font-size: 14px;}
+  .balance-stats{font-size: 14px;}
+  .balance-amount{font-size: 20px;}
+  .mb-text{font-size: 12px;}
+}
